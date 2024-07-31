@@ -18,7 +18,7 @@ function App() {
     if(token){
       dispatch(fetchTodos(token));
     }
-  }, [dispatch, token]);
+  }, [dispatch, token]); // dispatch can be ignored but it's a good practice.
 
   const handleAddTodo = () => {
     const title = prompt('Enter todo title');

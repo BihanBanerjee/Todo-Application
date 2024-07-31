@@ -14,11 +14,19 @@ const SignIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const resultAction = await dispatch(signIn({ username, password }));
+        //console.log(resultAction);
         if (signIn.fulfilled.match(resultAction)) {
             navigate('/todos');
-            console.log(resultAction.payload);
+            // console.log(resultAction.payload);
         }
     };
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const resultAction = dispatch(signIn({ username, password }));
+    //     console.log(resultAction);
+    //     navigate('/todos');
+    // };
 
     return (
         <div className='container mx-auto p-4'>
